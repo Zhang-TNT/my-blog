@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+
+<meta name="ICBM" content="19.0760, 72.8777">
+<meta name="geo.position" content="19.0760;72.8777">
+<meta name="geo.region" content="IN-MH">
+<meta name="geo.placename" content="Mumbai">
+<title> | wenwen</title>
+
+
+      <link rel="stylesheet" href="/css/tailwind.css" type="text/css">
+
+</head>
+
+<body class="bg-gradient-to-r from-slate-900 to-slate-800 font-mono text-white">
+  <div class="container mx-auto flex flex-col px-4 xl:w-8/12 sm:max-w-full">
+    
+  
+
+  <header class="flex flex-row py-4" >
+
+  
+
+
+
+  <nav
+    class="flex flex-row items-center w-full justify-between">
+
+
+  
+  
+    <div class="flex flex-col gap-1">
+      <a href="http://localhost:1313/" class="text-4xl font-bold hover:text-sky-400 whitespace-nowrap">Nayan Seth</a>
+      <p>Think Good! Do Good!</p>
+    </div>
+  
+
+  <div class="dropdown-menu flex flex-row absolute max-lg:w-full max-lg:items-center max-lg:justify-center max-lg:-top-full lg:static max-lg:bg-slate-900 max-lg:h-[calc(100dvh)] max-lg:left-0">
+    <ul class="flex flex-col lg:flex-row gap-2">
+      
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/about.html">About</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/blog">Blog</a>
+  </li>
+
+  <li class="font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+    <a href="/tags">Tags</a>
+  </li>
+
+    </ul>
+  </div>
+  <div class="open-dropdown-button lg:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white">
+      <path
+        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+    </svg>
+  </div>
+  <div class="close-dropdown-button hidden z-50">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 384 512" width="32" height="32" fill="white">
+      <path
+        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+    </svg>
+  </div>
+</nav>
+
+</header>
+
+  <div class="flex flex-col pt-8 gap-10 w-full">
+    
+    <div class="flex flex-col w-full gap-4">
+      <h2 class="text-3xl font-bold"></h2>
+      <div class="flex flex-col gap-4 w-full">
+        <hr />
+        <div class="prose prose-invert max-w-full">
+  <h1 id="datastructure_tutorial">DataStructure_tutorial</h1>
+<blockquote>
+<p>Data Structure tutorial for C</p></blockquote>
+<h2 id="introduction">Introduction</h2>
+<blockquote>
+<p>计算机解决一个具体问题：从具体问题抽象出一个适当的数学模型；设计一个解此数学模型的算法；编写程序，测试、调整直至得到最终解答</p></blockquote>
+<ol>
+<li>
+<p>数学知识复习</p>
+<p>证明数据结构分析中结论的两个常用方法是<strong>归纳法</strong>和<strong>反证法</strong>。</p>
+<ul>
+<li>
+<p>归纳法</p>
+<p>第一步证明<em>基准情况</em>，对于小群体事件的正确性；第二步进行<em>归纳假设</em>；第三步使用这个假设对下一个值进行证明。</p>
+</li>
+<li>
+<p>反证法</p>
+<p>反证法是通过假设定理不成立，然后证明该假设导致某个已知的性质不成立，从而说明原假设是错误的。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>递归</p>
+<p>有时候数学函数以不太标准的形式来定义，当一个函数用它自己来定义时就称为<strong>递归（recursive）</strong>，递归调用将反复进行直到基准情形出现。递归的四个基本法则</p>
+<ul>
+<li>
+<p>基准情形</p>
+<p>基准情形不用递归就能求解</p>
+</li>
+<li>
+<p>不断推进</p>
+<p>递归调用总朝着基准情形方向推进</p>
+</li>
+<li>
+<p>设计法则</p>
+<p>假设所有递归调用都能运行</p>
+</li>
+<li>
+<p>合成效益法则</p>
+<p>在求解一个问题的同一实例时，切勿在不同的递归调用中做重复性工作</p>
+</li>
+</ul>
+<p>案例1. 递归方法求阶乘$n!$</p>
+<p>数学分析：若$f(n)$表示$n!$，则满足$f(n) = n\times f(n-1)$，基准情形是$n=0$或$n=1$时，$f(n)=1$。代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">my_factorial</span>(<span style="color:#66d9ef">int</span> len)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (len <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (len <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> len <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> len <span style="color:#f92672">*</span> <span style="color:#a6e22e">my_factorial</span>(len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>案例2. 有5各学生坐一起，问第5个学生年龄，说其比第4个大2岁；问第4个年龄，说其比第3个大2岁；问第3个年龄，说其比第2个大2岁；问第2个年龄，说其比第1个大2岁；问第1个年龄，说其10岁。求第5个学生年龄</p>
+<p>数学分析：若$f(n)$表示第$n$个学生的年龄，则满足$f(n)=f(n-1)+2$，基准情形是$n=1$时，$f(n)=10$。代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">my_ageFactorial</span>(<span style="color:#66d9ef">int</span> len)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (len <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (len <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> <span style="color:#a6e22e">my_ageFactorial</span>(len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>编程机制</p>
+<p>C编程的基本策略是，用程序把源代码文件转换为可执行文件，即<strong>编译</strong>和<strong>链接</strong>。编译器把源代码转换为目标代码（<code>.obj</code>），链接器把中间代码和其他代码合并，生成可执行文件（<code>.exe</code>），目标文件和可执行文件都由机器语言指令组成。</p>
+</li>
+</ol>
+<h2 id="review">Review</h2>
+<h3 id="21-数据和c">2.1 数据和C</h3>
+<ol>
+<li>
+<p>常量</p>
+<p>数据类型在程序使用之前就预先设定好，在整个程序的运行过程中没有变化，称为<strong>常量</strong>（constant），在常量末尾加专用字符，强制指定常量类型，例如<code>3.14159f</code>，<code>31415U</code>，<code>10LU</code>等。有以下几种</p>
+<ul>
+<li>
+<p>整形常量</p>
+<p>整数是没有小数部分的数。</p>
+</li>
+<li>
+<p>实型常量</p>
+<p>实型是带有小数部分的数。计算机把实数分为<strong>小数部分</strong>和<strong>指数部分</strong>来表示，两种表示方法</p>
+<ul>
+<li>小数形式：<code>3.1415</code></li>
+<li>指数形式：<code>e</code>或<code>E</code>表示底数10，前后必须有数字，且后面必须为整数，<code>3.16E2</code>表示<code>316</code>。</li>
+</ul>
+</li>
+<li>
+<p>字符常量</p>
+<p>普通字符：用单引号括起来的一个字符，本质是<code>int</code>型的ASCII码</p>
+<p>转义字符：以<code>\</code>开头的字符</p>
+</li>
+<li>
+<p>字符串常量</p>
+<p>用双引号把若干个字符常量括起来</p>
+</li>
+<li>
+<p>符号常量</p>
+<p>用<code>#define</code>指令，指定用一个符号名称代表一个常量，符号常量<strong>不占内存</strong>，只是一个临时符号，代表一个值，在预编译后这个符号就不存在了，符号常量用大写字母表示。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>变量</p>
+<p>数据类型在程序的运行过程中会被改变或被赋值，称为<strong>变量</strong>（variable），变量必须<strong>先定义初始化后使用</strong>，变量名实际上是以一个名字代表的一个存储地址，未赋值的变量的值由编译器决定。有以下几种</p>
+<ul>
+<li>
+<p>整型变量</p>
+<p>关键字<code>int</code>，一般占4个字节，<code>short</code>比<code>int</code>占用的内存少，<code>long</code>比<code>int</code>占用的内存多。提供附属关键字<code>short</code>、<code>long</code>、<code>long long</code>和<code>unsigned</code>。在打印时，<code>unsigned int</code>使用转义字符<code>%u</code>；<code>long</code>使用转义字符<code>%ld</code>；十六进制使用转义字符<code>%x</code>或<code>%#x</code>；八进制使用转义字符<code>%o</code>或<code>%#o</code>；内存地址使用转义字符<code>%p</code>。</p>
+</li>
+<li>
+<p>实型变量</p>
+<p>关键字<code>float</code>，一般占4个字节，<code>double</code>比<code>float</code>占用内存多，实型的表示类似科学计数法，指数计数法。提供附属关键字<code>double</code>和<code>long double</code>。在使用指数计数法时，<code>e</code>的两侧必须有数字，且右侧必须为整数，例如<code>float num = 6.63e-3;</code>。在打印时，转换说明<code>%f</code>为十进制计数法打印；转换说明<code>%e</code>为指数计数法打印。<code>NaN</code>为浮点类型。实型数据不能加修饰符<code>signed</code>或<code>unsigned</code>。</p>
+</li>
+<li>
+<p>字符变量</p>
+<p>关键字<code>char</code>，一般占1个字节，<code>char</code>类型用于存储字符，但技术层面<code>char</code>是整型，<code>char</code>实际上存储的是整型，即ASCII码，65代表<code>A</code>，97代表<code>a</code>。<code>char</code>被定义为8位的存储单元，在初始化时使用单引号<code>''</code>进行赋值，使用转换说明<code>%c</code>进行字符打印。</p>
+</li>
+<li>
+<p>常变量</p>
+<p>在定义变量时，加关键字<code>const</code>，常变量<strong>所在期间其值不能改变</strong>，有类型并且占内存。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>存储方式</p>
+<ul>
+<li>
+<p>常量</p>
+<p>常量的存储位置可分为<strong>只读数据段</strong>、<strong>代码段</strong>、<strong>栈</strong>和<strong>数据段</strong>这几种情况。</p>
+<ul>
+<li>只读数据段：常量、<code>const</code>全局常量等，只读</li>
+<li>代码段：存储程序的机器指令</li>
+<li>栈：局部<code>const</code>变量，动态分配的内存区域</li>
+<li>数据段：非常量变量于此存储</li>
+</ul>
+<p>字面常量存储在只读数据段或代码段；<code>#define</code>常量不占用存储空间；<code>const</code>全局常量在只读数据段，<code>const</code>局部常量在栈中；字符串常量在只读数据段。</p>
+</li>
+<li>
+<p>变量</p>
+<p>变量的存储方式可分为<strong>静态存储方式</strong>和<strong>动态存储方式</strong>。</p>
+<ul>
+<li>静态：由系统分配</li>
+<li>动态：开发者进行动态分配</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>存储类别</p>
+<p>C语言有以下关键字作为存储类别说明符：<code>auto</code>、<code>register</code>、<code>static</code>、<code>extern</code>、<code>_Thread_local</code>。</p>
+<ul>
+<li>
+<p><code>auto</code>：由系统管理分配内存，只能用于块作用域的变量声明中，一般可以省略关键字</p>
+</li>
+<li>
+<p><code>register</code>：将变量归为寄存器存储类别，以最快速度访问，同时地址不被释放</p>
+</li>
+<li>
+<p><code>static</code>：用于块作用域声明，能保留其存储单元不被释放，但是只有在执行块内的代码时才能访问；且由于静态存储长期占用内存不释放降低了程序效率，同时调用多次后的当前值往往未知；如需对某些外部变量加以限制，只允许在本文件中被引用而不被其他文件引用，可使用关键字<code>static</code>对外部变量进行声明；还可用于限制函数的作用域。</p>
+</li>
+<li>
+<p><code>extern</code>：作为扩展作用域使用，如下</p>
+<ul>
+<li>
+<p>在一个文件内扩展外部变量的作用域</p>
+<p>在定义点之前的函数引用外部变量，需要在引用之前使用关键字<code>extern</code>对该变量作<strong>外部变量声明</strong>，案例如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> a, b, c;	<span style="color:#75715e">// 把外部变量a, b, c作用域扩展至此
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a, b, c;	<span style="color:#75715e">// 定义外部变量a, b, c
+</span></span></span></code></pre></div></li>
+<li>
+<p>将外部变量的作用域扩展到其他文件</p>
+<p>工程中其他文件如引用当前文件中的外部变量，需要在其他文件中使用关键字<code>extern</code>对当前文件中的外部变量作<strong>外部变量声明</strong>，案例如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// file1.c
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> A;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// file2.c
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">int</span> A;	<span style="color:#75715e">// 将file1.c中的外部变量A作用域扩展至此
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">func</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> A;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>关键字<code>extern</code>还可用于扩展函数的作用域。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>_Thread_local</code>：定义线程局部存储</p>
+</li>
+</ul>
+<p>根据函数能否被其他源文件调用，可将函数分为<strong>内部函数</strong>和<strong>外部函数</strong></p>
+<ul>
+<li>
+<p>内部函数</p>
+<p>只能被本文件中的其他函数所调用，在定义时添加关键字<code>static</code>进行静态声明</p>
+</li>
+<li>
+<p>外部函数</p>
+<p>可供其他文件调用，在定义时添加关键字<code>extern</code>进行外部声明</p>
+</li>
+</ul>
+<p>查找内存地址，可使用<code>&amp;</code>运算符，使用转义字符<code>%p</code>进行打印，以十六进制形式表示。</p>
+</li>
+<li>
+<p>类型限定符</p>
+<p>通常用类型和存储类别来描述一个变量，恒常性、易变形、严格性和原子性，分别用关键字<code>const</code>、<code>volatility</code>、<code>restrict</code>和<code>_Atomic</code>声明。</p>
+<ul>
+<li><code>const</code>：限定变量为只读</li>
+<li><code>volatile</code>：告诉编译器该变量的值可能会在程序之外被修改，因此编译器不应对其进行优化</li>
+<li><code>restrict</code>：允许编译器优化某部分代码以更好地支持计算，只能用于指针，表明该指针是访问数据对象的唯一且初始的方式</li>
+<li><code>_Atomic</code>：确保对变量的操作是不可分割的，在多线程环境下要么完全执行，要么完全不执行，不会被打断，可避免竞争条件，多线程同时访问和修改共享变量时。</li>
+</ul>
+</li>
+</ol>
+<h3 id="22-数组">2.2 数组</h3>
+<ol>
+<li>
+<p>一维数组</p>
+<p>数组是按顺序存储的一系列类型相同的值，从0开始索引，使用方括号表面元素个数，大括号表明所含元素，一般使用符号常量表示数组大小，<strong>在定义数组时，必须指定数组大小</strong>。这里举冒泡排序算法为例</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// 每次将相邻两个进行比较，然后移位
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">my_bubbleSort</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>arr, <span style="color:#66d9ef">int</span> len)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> len <span style="color:#f92672">-</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (arr[j] <span style="color:#f92672">&gt;</span> arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                temp <span style="color:#f92672">=</span> arr[j];
+</span></span><span style="display:flex;"><span>                arr[j] <span style="color:#f92672">=</span> arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>                arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>选择法是先将10个数中最小的数与<code>a[0]</code>对换；再将剩余9个数中最小的数与<code>a[1]</code>对换；依此类推，总共需要9次。用选择法对数据进行排序</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">my_selectSort</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>arr, <span style="color:#66d9ef">int</span> len)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, minIndex;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        minIndex <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;</span> len; j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (arr[j] <span style="color:#f92672">&lt;</span> arr[minIndex])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                minIndex <span style="color:#f92672">=</span> j;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        temp <span style="color:#f92672">=</span> arr[i];
+</span></span><span style="display:flex;"><span>        arr[i] <span style="color:#f92672">=</span> arr[minIndex];
+</span></span><span style="display:flex;"><span>        arr[minIndex] <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>多维数组</p>
+<p>二维数组常称为<strong>矩阵</strong>，由行（row）和列（column）的排列形式。C语言中，<strong>不能省略高维的大小说明</strong>。二维数组中元素排列的顺序是按行存放，在内存中先顺序存放第1行的元素，再放第2行的元素，依次存放剩余。多维数组元素在内存中的排列顺序：第一维的下标变化最慢，最右边的下标变化最快。</p>
+<p>案例，气象研究员Tempest Cloud为完成她的研究项目要分析5年内每个月的降 水量数据，她首先要解决的问题是如何表示数据。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">my_rainfall</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">float</span> arr[][MONTHS])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">YEAR</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74"> RAINFALL(inches)</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">float</span> total, subtotal;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> MONTHS; j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            subtotal <span style="color:#f92672">+=</span> arr[i][j];
+</span></span><span style="display:flex;"><span>        total <span style="color:#f92672">+=</span> subtotal;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">%5d %10.1f</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i <span style="color:#f92672">+</span> <span style="color:#ae81ff">2010</span>, subtotal);
+</span></span><span style="display:flex;"><span>        subtotal <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;The yearly average rainfall is %5.1f inches</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, (total <span style="color:#f92672">/</span> <span style="color:#ae81ff">5</span>));
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;MONTHLY AVERAGE RAINFALL</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">JAN</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">FEB</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">MAR</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">APR</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">MAY</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">JUN</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">JUL</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">AUG</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">SEP</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">OCT</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">NOV</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">DEC</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> MONTHS; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            subtotal <span style="color:#f92672">+=</span> arr[j][i];
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">%.1f&#34;</span>, subtotal <span style="color:#f92672">/</span> <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>        subtotal <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>字符数组</p>
+<p>用双引号括起来的内容称为<strong>字符串常量</strong>，不可被更改。字符串是存放在字符型数组中，当元素个数小于数组长度，剩余元素自动定为<strong>空字符</strong><code>\0</code>。字符串以空字符<code>\0</code>作为结束标志，由C系统自动添加。使用格式符<code>%c</code>输入或输出一个字符，格式符<code>%s</code>输入或输出一串字符，在进行字符串的输入时<strong>系统把空格字符作为输入的字符串之间的分隔符</strong>。函数<code>scanf()</code>使用格式说明符<code>%s</code>时，默认读取直到第一个空白符为止的字符序列，<strong>空格之后的所有字符会留在输入缓冲区中</strong>，这就会导致回车键作为第二次输入。</p>
+<p>字符串处理函数</p>
+<ul>
+<li><code>puts(string)</code>函数，自带换行符</li>
+<li><code>gets(string)</code>函数，获取键盘输入字符串</li>
+<li><code>strcat(str1, str2)</code>函数，把<code>str2</code>接到<code>str1</code>后面，结果存放在<code>str1</code>中。</li>
+<li><code>strcpy(str1, str2)</code>和<code>strncpy(str1, str2, n)</code>函数，把<code>str2</code>复制到<code>str1</code>中；把<code>str2</code>中前<code>n</code>各字符复制到<code>str1</code>中。</li>
+<li><code>strcmp(str1, str2)</code>函数，比较<code>str1</code>和<code>str2</code>，<strong>小写字母比大写字母大</strong>，两者相同时函数值为0；<code>str1&gt;str2</code>时，函数值为正整数；<code>str1&lt;str2</code>时，函数值为负整数。</li>
+<li><code>strlen(str)</code>函数，返回字符串的实际长度</li>
+<li><code>strlwr(str)</code>函数，将字符串中大写字母转换为小写字母</li>
+<li><code>strupr(str)</code>函数，将字符串中小写字母转换为大写字母</li>
+</ul>
+<p>初始化字符数组和初始化指针指向字符串有区别，如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> str[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello World!&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>pstr <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello World!&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 数组名str是常量，不可进行变量操作，如str++
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 指针名pstr是变量，可进行变量操作，如pstr++
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 未加const关键字的数组的元素是变量，但数组名是常量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello World!&#34;</span>;
+</span></span><span style="display:flex;"><span>str[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;F&#39;</span>;               <span style="color:#75715e">// 字符串常量是不可变的
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Hello World!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, str);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">char</span> str[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello World!&#34;</span>;
+</span></span><span style="display:flex;"><span>str[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;F&#39;</span>;				<span style="color:#75715e">// 正常，字符数组元素运行被修改
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, str);
+</span></span></code></pre></div></li>
+<li>
+<p>数组常用操作</p>
+<ol>
+<li>
+<ul>
+<li>
+<p>初始化</p>
+<p>分为两种初始化方式：无初始值、给定初始值。大多数编译系统在未指定初始值的情况下会将数组元素初始化为0。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">my_arrayInit</span>(<span style="color:#66d9ef">int</span> len)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>pArr;
+</span></span><span style="display:flex;"><span>    pArr <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>)<span style="color:#a6e22e">malloc</span>(len <span style="color:#f92672">*</span> <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        pArr[i] <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> pArr;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>访问元素</p>
+<p>数组元素被存储在连续的内存空间中，只需要给定数组内存地址和元素索引即可完成对元素的访问。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#75715e">// 对元素的访问，时间复杂度为O(1)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">my_arrayAccess</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>arr, <span style="color:#66d9ef">int</span> index)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">*</span>(arr <span style="color:#f92672">+</span> index);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>插入元素</p>
+<p>数组元素在内存中是“紧挨着的”，若想在数组中见插入一个元素，需要将该位置及之后的所有元素都向后移动一位，并且数组长度必须足够大。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// 数组元素的插入时间复杂度为O(n)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">my_arrayInsert</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>arr, <span style="color:#66d9ef">int</span> size, <span style="color:#66d9ef">int</span> num, <span style="color:#66d9ef">int</span> index)
+</span></span><span style="display:flex;"><span>{ <span style="color:#75715e">// 大小为size的数组，在index位置插入数字num
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> size <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&gt;=</span> index; i<span style="color:#f92672">--</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        arr[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> arr[i];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    arr[index] <span style="color:#f92672">=</span> num;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>删除元素</p>
+<p>删除某处索引的元素，需要将该索引之后的所有元素向前移动一位。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// 数组元素的删除时间复杂度为O(n)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">my_arrayDelete</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>arr, <span style="color:#66d9ef">int</span> size, <span style="color:#66d9ef">int</span> index)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> index; i <span style="color:#f92672">&lt;</span> size <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        arr[i] <span style="color:#f92672">=</span> arr[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>遍历元素</p>
+<p>通过索引遍历数组。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">my_arrayTraverse</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>arr, <span style="color:#66d9ef">int</span> size)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> size; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d &#34;</span>, arr[i]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>查找元素</p>
+<p>数组中查找指定元素需要遍历数组，对每轮索引进行判断。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">my_arraySearch</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>arr, <span style="color:#66d9ef">int</span> size, <span style="color:#66d9ef">int</span> target)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> size; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (arr[i] <span style="color:#f92672">==</span> target)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> i;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>扩容数组</p>
+<p>复杂的系统环境中，无法保证数组容量的安全扩展，<strong>数组长度一般不可变</strong>。现常用新建立一个更大的数组，将原数组元素按位复制到新数组。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">my_arrayExtend</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>arr, <span style="color:#66d9ef">int</span> size, <span style="color:#66d9ef">int</span> enlarge)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>pArr;
+</span></span><span style="display:flex;"><span>    pArr <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>)<span style="color:#a6e22e">malloc</span>((size <span style="color:#f92672">+</span> enlarge) <span style="color:#f92672">*</span> <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> size; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        pArr[i] <span style="color:#f92672">=</span> arr[i];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> size; i <span style="color:#f92672">&lt;</span> size <span style="color:#f92672">+</span> enlarge; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        pArr[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> pArr;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<p><strong>注意</strong>：在定义了一个数组后，<strong>该数组名是地址，是常量</strong>，不能进行变量操作。字符数组由若干个元素组成，每个元素中放一个字符；而字符指针变量中存放的是地址，指向字符串第1个字符的地址；编译时为字符数组分配若干个存储单元，<strong>为字符指针变量只分配一个存储单元</strong>；指针变量可改变，字符数组名为常量不可改变；<strong>字符数组中的元素可被改变，字符指针指向的字符串常量不可被改变</strong>，<code>char *p = &quot;hello&quot;; *(p + 2) = 'r'</code>这种写法错误。</p>
+</li>
+</ol>
+<h3 id="23-指针">2.3 指针</h3>
+<ol>
+<li>
+<p>定义</p>
+<p>程序中定义了一个变量，在对程序进行编译时会给这个变量分配内存单元，该内存单元存放变量的值，该内存单元的地址即为变量的位置，<strong>地址指向变量单元</strong>，称地址为<strong>指针</strong>。C语言中的地址包括<strong>位置信息</strong>和其所指向的数据的<strong>类型信息</strong>，亦称为“带类型的地址”。变量地址可使用格式说明符<code>%p</code>打印。指针作为函数参数时，传递的是参数的地址，而不是参数的全部内容</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>a_pointer <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>a, <span style="color:#f92672">*</span>b_pointer <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>b; <span style="color:#75715e">// 定义两个整型指针变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;original a = %d, b = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a, b);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;*a_pointer = %d, *b_pointer = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>a_pointer, <span style="color:#f92672">*</span>b_pointer);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 引用指针变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> num <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>p;
+</span></span><span style="display:flex;"><span>p <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>num;	<span style="color:#75715e">// 给指针变量p赋值，指向num
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>p);	<span style="color:#75715e">// 引用指针变量指向的变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%X</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, p);	<span style="color:#75715e">// 引用指针变量的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 指针变量作函数参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swap</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>p1, <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>p2)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> temp;
+</span></span><span style="display:flex;"><span>    temp <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>p1;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>p1 <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>p2;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>p2 <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 用数组名、指针作函数参数，下面两种写法等价
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">print_array1</span>(<span style="color:#66d9ef">int</span> a[], <span style="color:#66d9ef">int</span> len)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len; i<span style="color:#f92672">++</span>) <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a[i]);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">print_array2</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>P, <span style="color:#66d9ef">int</span> len)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len; i<span style="color:#f92672">++</span>, p<span style="color:#f92672">++</span>) <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>p);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>符号<code>*</code>是指针运算符，用于访问指针变量所指向的对象。数组名是该数组首元素的地址，因此可通过指针引用数组。<strong>指针变量的值可以被改变，数组名不可被改变</strong>。</p>
+</li>
+<li>
+<p>方法</p>
+<p>引用一个数组元素，有以下两种方法</p>
+<ul>
+<li>下标法：<code>p[i]</code></li>
+<li>指针法：<code>*(p++)</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// 两种方法遍历数组
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">my_arraySubscript</span>(<span style="color:#66d9ef">int</span> arr[<span style="color:#ae81ff">5</span>])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;arr[%d] = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, arr[i]);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">my_arrayPointer</span>(<span style="color:#66d9ef">int</span> arr[<span style="color:#ae81ff">5</span>])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;the address of arr is %p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, arr);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;arr[%d] = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, <span style="color:#f92672">*</span>(arr <span style="color:#f92672">+</span> i));
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;the address of arr is %p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, arr); <span style="color:#75715e">// arr仍然是第一个元素的地址
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>pArr <span style="color:#f92672">=</span> arr;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;the address of pArr is %p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pArr);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (pArr <span style="color:#f92672">=</span> arr; pArr <span style="color:#f92672">&lt;</span> arr <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span>; pArr<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;arr[%d] = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pArr <span style="color:#f92672">-</span> arr, <span style="color:#f92672">*</span>pArr);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;the address of pArr is %p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, pArr); <span style="color:#75715e">// pArr已经是最后一个元素的地址
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div></li>
+<li>
+<p>指针与多维数组</p>
+<p>对于多维数组，以二维数组<code>a[3][4]</code>为例。</p>
+<p>二维数组名<code>a</code>代表的是第一行的起始地址</p>
+<p>那么<code>a+1</code>为第二行的起始地址，<code>a[i]</code>相当于一个指针，指向第<code>i</code>行</p>
+<p>可认为<code>a</code>相当于一个双重指针，指向第一行这个数组，<code>(a+i)</code>指向第<code>i</code>行这个数组</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">my_twoDimensionalArray</span>(<span style="color:#66d9ef">int</span> arr[<span style="color:#ae81ff">3</span>][<span style="color:#ae81ff">4</span>])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf_s</span>(<span style="color:#e6db74">&#34;the array is:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">4</span>; j<span style="color:#f92672">++</span>, temp<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%2d &#34;</span>, arr[i][j]);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (temp <span style="color:#f92672">%</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;**arr = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">**</span>arr);                         <span style="color:#75715e">// **arr = arr[0][0]，即第一行第一个元素的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;*(*arr + 1) = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>(<span style="color:#f92672">*</span>arr <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>));             <span style="color:#75715e">// *(*arr + 1) = arr[0][1]，即第一行第二个元素的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;**(arr + 1) = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">**</span>(arr <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>));             <span style="color:#75715e">// **(arr + 1) = arr[1][0]，即第二行第一个元素的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;*(*(arr + 1) + 1) = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>(<span style="color:#f92672">*</span>(arr <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)); <span style="color:#75715e">// *(*(arr + 1) + 1) = arr[1][1]，即第二行第二个元素的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p><strong>注意</strong>：<code>a[i]</code>和<code>a</code>的区别在于，<code>a[i]</code>是一维指针，<code>a</code>是二维指针；<code>a[i]</code>是指向列元素的，<code>a</code>是指向行（一维数组）的。</p>
+<ul>
+<li>
+<p>指向数组元素的指针变量</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">my_pointerToArrayElement</span>(<span style="color:#66d9ef">int</span> arr[<span style="color:#ae81ff">3</span>][<span style="color:#ae81ff">4</span>])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>pArr <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>arr[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>];	<span style="color:#75715e">// 指针pArr指向数组第一个元素
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (pArr; pArr <span style="color:#f92672">&lt;</span> arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> <span style="color:#ae81ff">12</span>; pArr<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ((pArr <span style="color:#f92672">-</span> arr[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">%</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%2d &#34;</span>, <span style="color:#f92672">*</span>pArr);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>指向由m个元素组成的一维数组的指针变量，即指向一维数组的指针</p>
+<p>例如定义<code>int (*p)[4];</code>是一个指向长度为4的<code>int</code>型数组，并且只能指向一个包含4个元素的一维数组。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">my_pointerToArray</span>(<span style="color:#66d9ef">int</span> arr[<span style="color:#ae81ff">3</span>][<span style="color:#ae81ff">4</span>])
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span>(<span style="color:#f92672">*</span>pArr)[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">=</span> arr; <span style="color:#75715e">// 指针pArr指向数组第一行
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (pArr; pArr <span style="color:#f92672">&lt;</span> arr <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>; pArr<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>eArr <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>pArr; eArr <span style="color:#f92672">&lt;</span> <span style="color:#f92672">*</span>pArr <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span>; eArr<span style="color:#f92672">++</span>) <span style="color:#75715e">// 指针eArr指向数组每一行的元素
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%2d &#34;</span>, <span style="color:#f92672">*</span>eArr);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>注意</strong>：不可使用<code>int **p = arr;</code>，这是因为<code>*p</code>的类型未知，因此要保证指针的<strong>基类型</strong>一致。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>指针与函数</p>
+<p>函数在定义完后，编译时会被分配一段内存空间，该空间的起始地址即为该函数的入口地址。</p>
+<ul>
+<li>
+<p>指向函数的指针</p>
+<p><strong>函数名代表函数的起始地址</strong>，函数名就是函数的指针。函数指针可以被用来作为函数参数，接收函数指针的这个函数可以回调函数指针所指向的函数。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> (<span style="color:#f92672">*</span>p)(<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span>);<span style="color:#75715e">// 定义了一个指向函数的指针变量`p`，该函数类型为整型且有两个整型参数。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">max</span>(<span style="color:#66d9ef">int</span> x, <span style="color:#66d9ef">int</span> y);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a, b, c;
+</span></span><span style="display:flex;"><span>p <span style="color:#f92672">=</span> max;
+</span></span><span style="display:flex;"><span>c <span style="color:#f92672">=</span> (<span style="color:#f92672">*</span>p)(a, b);<span style="color:#75715e">// 调用函数max()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">Hello_print</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Hello</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func_example</span>(<span style="color:#66d9ef">void</span> (<span style="color:#f92672">*</span>ptr)())<span style="color:#75715e">// 函数指针作为其参数，ptr指向一个函数，这个函数不带参数、无返回值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ptr</span>();<span style="color:#75715e">// 调用ptr所指向的哪个函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> (<span style="color:#f92672">*</span>temp_func)();<span style="color:#75715e">// 定义一个无参、无返回值的函数指针temp_func
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>temp_func <span style="color:#f92672">=</span> Hello_print;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">func_example</span>(temp_func);<span style="color:#75715e">// 通过函数func_example()回调Hello_print()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div></li>
+<li>
+<p>返回指针的函数</p>
+<p>函数返回指针，一般形式<code>int *fun(int xn, int yn);</code>，相当于该函数返回一个地址。</p>
+</li>
+<li>
+<p>指针数组和多重指针</p>
+<p>数组的组成元素均为指针类型，称为<strong>指针数组</strong>，每一个元素都存放一个地址，如<code>int *p[4];</code>定义了一个大小为4的<strong>整型指针数组</strong>，适用于<strong>指向若干个字符串</strong>，类似二维数组。案例如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>name[] <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;Nancy&#34;</span>, <span style="color:#e6db74">&#34;Mia&#34;</span>, <span style="color:#e6db74">&#34;Kristin&#34;</span>, <span style="color:#e6db74">&#34;Sophia&#34;</span>};	<span style="color:#75715e">// 每一个元素指向一个字符串
+</span></span></span></code></pre></div><p>指向指针的指针变量，亦称为<strong>多重指针</strong>。一般形式<code>char **p;</code>相当于<code>char*(*p);</code>，指向指针的指针变量存储的是所指向的指针的地址，相当于嵌套映射。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> <span style="color:#f92672">**</span>p;
+</span></span><span style="display:flex;"><span>p <span style="color:#f92672">=</span> name <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>;				<span style="color:#75715e">// p指向&#34;Kristin&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>p);			<span style="color:#75715e">// 输出&#34;Kristin&#34;地址
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>p);			<span style="color:#75715e">// 输出&#34;Kristin&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;%c</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>(p[<span style="color:#ae81ff">2</span>]));	<span style="color:#75715e">// 输出&#39;i&#39;
+</span></span></span></code></pre></div><p><strong>注意</strong>：在定义指针时，一定要及时对其进行初始化，否则该指针所指向的内存单元不可预料。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="24-内存分配">2.4 内存分配</h3>
+<p>当声明一个数据类型时，其所需的内存在编译时就被分配，在离开其作用域后内存自动释放。由于在声明数组时，必须指定数组长度使用动态内存分配在运行时为其分配内存。对内存的动态分配有以下库函数</p>
+<ul>
+<li>
+<p>用<code>void *malloc(unsigned int size);</code>开辟动态存储区</p>
+<p>在内存中动态存储区中分配一个长度为<code>size</code><strong>连续空间</strong>，返回所分配区域的第一个字节的地址，分配失败则返回空指针（NULL）。</p>
+</li>
+<li>
+<p>用<code>void *calloc(unsigned n, unsigned size);</code>开辟动态存储区</p>
+<p>在内存的动态存储区中分配<code>n</code>个长度为<code>size</code>的连续空间，一般用于保存数组，即<strong>动态数组</strong>。返回所分配存储区域的第一个字节的地址，分配失败则返回空指针（NULL）。</p>
+</li>
+<li>
+<p>用<code>void *realloc(void *p, unsigend int size);</code>重新分配动态存储区</p>
+<p>在已用<code>malloc</code>或<code>calloc</code>函数分配了动态空间后想改变其大小，可用<code>realloc</code>函数重新分配，将<code>p</code>指向的动态空间大小改编为<code>size</code>，改变失败则返回空指针（NULL）。</p>
+</li>
+<li>
+<p>用<code>free(void *p);</code>释放动态存储区</p>
+<p>释放指针<code>p</code>所指向的动态空间，无返回值。</p>
+</li>
+</ul>
+<p>以上函数的声明在<code>stdlib.h</code>头文件中，结果是获得动态存储区的起始地址。<code>void</code>指针类型为“指向空类型”，在赋值时应注意<strong>类型转换</strong>。要注意的是在分配到存储区后，得到的是该区域第一个字节的地址，要使用该区域就必须使用指针。案例如下</p>
+<h3 id="25-内存中的栈和堆">2.5 内存中的栈和堆</h3>
+<ol>
+<li>栈</li>
+<li>堆</li>
+</ol>
+<h3 id="26-建立数据类型">2.6 建立数据类型</h3>
+<ol>
+<li>结构体</li>
+<li>共用体</li>
+<li>枚举类型</li>
+</ol>
+<h2 id="datastructure--algorithm">DataStructure &amp; Algorithm</h2>
+<blockquote>
+<p>数据结构包括<strong>逻辑结构（抽象关系）</strong>、<strong>存储结构</strong>和<strong>数据运算</strong>，对数据类型进行抽象，<strong>抽象数据类型</strong>（Abstract Data Type, ADT）包括三部分：数据对象、数据关系和基本操作。</p></blockquote>
+<h3 id="31-算法">3.1 算法</h3>
+<p><strong>算法</strong>是为了解决问题而规定的一个有限长的操作序列。一个算法必须满足以下五个特性</p>
+<ul>
+<li><strong>有穷性</strong>：有穷步骤</li>
+<li><strong>确定性</strong>：每种情况都有确定的结果</li>
+<li><strong>可行性</strong>：每一步骤可行</li>
+<li><strong>输入</strong>：有零个或多个输入</li>
+<li><strong>输出</strong>：有一个或多个输出</li>
+</ul>
+<p>算法优劣的评价标准</p>
+<ul>
+<li>正确性：在合理的数据输入下，能在有限的运行时间内得到正确结果</li>
+<li>可读性：便于理解</li>
+<li>健壮性：当输入数据非法时，能做出正确反应</li>
+<li>高效性：包括时间和空间两方面，执行效率高和占用存储容量合理</li>
+</ul>
+<p>一个程序的运行时间，依赖于算法的好坏和问题的输入规模。算法效率的度量方法主要有两类，事后统计法和事前分析估算法，通常采用<strong>事前分析估算法</strong>。</p>
+<p>一条语句的重复执行次数称作<strong>语句频度</strong>（Frequency Count）。案例如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)						<span style="color:#75715e">// 频度为n+1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;=</span> n; j<span style="color:#f92672">++</span>)					<span style="color:#75715e">// 频度为n*(n+1)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span><span style="display:flex;"><span>        c[i][j] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;						  <span style="color:#75715e">// 频度为n^2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; k <span style="color:#f92672">&lt;=</span> n; k<span style="color:#f92672">++</span>)				<span style="color:#75715e">// 频度为n^2*(n+1)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            c[i][j] <span style="color:#f92672">=</span> c[i][j] <span style="color:#f92672">+</span> a[i][k] <span style="color:#f92672">*</span> b[k][j];	<span style="color:#75715e">// 频度为n^3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>该算法中所有语句频度之和$T(n)$是结束$n$的函数，用$f(n)$表示，也就是算法的执行时间与$f(n)$成正比。</p>
+<ol>
+<li>
+<p>算法的时间复杂度定义</p>
+<p>用&quot;O&quot;表示数量级，则上述算法可记作$T(n) = O(f(n))=O(n^3)$，表示随问题规模$n$的增大，算法执行时间的增长率和$f(n)$的增长率相同，称作算法的<strong>渐近时间复杂度</strong>，简称<strong>时间复杂度</strong>。</p>
+</li>
+<li>
+<p>算法的空间复杂度定义</p>
+<p>空间复杂度$S(n)$定义为该算法所消耗的存储空间，记作$S(n)=O(g(n))$，一般指所占用临时的工作单元数有关。</p>
+</li>
+</ol>
+<p>算法的时间复杂度和空间复杂度是相互影响的，通常假设运算空间充足，以时间复杂度作为算法优劣的衡量标准。</p>
+<h3 id="32-线性表">3.2 线性表</h3>
+<p>由有限个数据特性相同的元素构成的序列称为<strong>线性表</strong>，一般表示为$L = (a_1,a_2,&hellip;,a_n)$。对于非空的线性表或线性结构，有以下特点</p>
+<ul>
+<li>存在唯一一个“第一个”数据元素$a_1$，表头元素</li>
+<li>存在唯一一个“最后一个”数据元素$a_n$，表尾元素</li>
+<li>出第一个外，结构中的每个元素均只有一个前驱</li>
+<li>除最后一个外，结构中的每个元素均只有一个后继</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Zhang-TNT/markdown-imgs@main/imgs/image-20250225205124061.png" alt="image-20250225205124061"></p>
+<p>对线性表进行数据类型抽象：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>ADT List{
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">数据对象：</span>D <span style="color:#f92672">=</span> {ai<span style="color:#f92672">|</span>ai belong to ElemSet}
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">数据关系：</span>R <span style="color:#f92672">=</span> {<span style="color:#f92672">&lt;</span>ai<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, ai<span style="color:#f92672">&gt;|</span>ai<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">基本操作：</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">InitList</span>(<span style="color:#f92672">&amp;</span>L)<span style="color:#960050;background-color:#1e0010">：初始化，构造一个空的线性表</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">LengthList</span>(L)<span style="color:#960050;background-color:#1e0010">：求表长，返回线性表</span>L的长度
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">LocateElem</span>(L, e)<span style="color:#960050;background-color:#1e0010">：按值查找，在</span>L中查找值为e的元素
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">GetElem</span>(L, i)<span style="color:#960050;background-color:#1e0010">：按位查找，在</span>L中查找第i位的元素
+</span></span><span style="display:flex;"><span> 	    <span style="color:#a6e22e">ListInsert</span>(<span style="color:#f92672">&amp;</span>L, i, e)<span style="color:#960050;background-color:#1e0010">：插入操作，在</span>i位插入元素e
+</span></span><span style="display:flex;"><span> 	    <span style="color:#a6e22e">ListDelete</span>(<span style="color:#f92672">&amp;</span>L, i, <span style="color:#f92672">&amp;</span>e)<span style="color:#960050;background-color:#1e0010">：删除操作，</span>e返回删除元素的值
+</span></span><span style="display:flex;"><span> 	    <span style="color:#a6e22e">PrintList</span>(L)<span style="color:#960050;background-color:#1e0010">：输出操作，顺序打印表</span>L元素
+</span></span><span style="display:flex;"><span> 	    <span style="color:#a6e22e">EmptyList</span>(L)<span style="color:#960050;background-color:#1e0010">：判空操作</span>
+</span></span><span style="display:flex;"><span> 	    <span style="color:#a6e22e">DestroyList</span>(<span style="color:#f92672">&amp;</span>L)<span style="color:#960050;background-color:#1e0010">：销毁操作，销毁线性表并释放</span>L的内存空间
+</span></span><span style="display:flex;"><span> 	    <span style="color:#a6e22e">ClearList</span>(<span style="color:#f92672">&amp;</span>L)<span style="color:#960050;background-color:#1e0010">：清空操作</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="321-线性表的顺序表示和实现">3.2.1 线性表的顺序表示和实现</h4>
+<p>线性表的顺序表示是<strong>用一段地址连续的存储单元</strong>依次存储线性表的数据元素（顺序表索引从1开始），这种表示称作线性表的顺序存储结构或顺序映像，逻辑位序和物理位序均相差1，称这种存储结构的线性表为<strong>顺序表</strong>。示意图如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zhang-TNT/markdown-imgs@main/imgs/image-20250225205636641.png" alt="image-20250225205636641"></p>
+<p>线性表的每个数据元素的类型都相同，即可用C语言中的一维数组来实现顺序存储结构，有两种方式</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// 静态分配
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#define MAXSIZE 100
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">int</span> ElemType;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> _SqList_static	<span style="color:#75715e">// 顺序表存储结构
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    ElemType elem[MAXSIZE];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> length;
+</span></span><span style="display:flex;"><span>}SqList_static;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 动态分配，主要用于有指针操作的语言
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#define MAXSIZE 100
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">int</span> ElemType;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> _SqList_dynamic
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    ElemType <span style="color:#f92672">*</span>elem;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> length;
+</span></span><span style="display:flex;"><span>}SqList_dynamic;
+</span></span><span style="display:flex;"><span>SqList_dynamic L;
+</span></span><span style="display:flex;"><span>L.elem <span style="color:#f92672">=</span> (ElemType <span style="color:#f92672">*</span>)<span style="color:#a6e22e">malloc</span>(<span style="color:#66d9ef">sizeof</span>(ElemType) <span style="color:#f92672">*</span> MAXSIZE);
+</span></span></code></pre></div><p>假设线性表中每个元素占用$l$个存储单元，那么线性表中第$i+1$个元素的存储位置$LOC(a_{i+1})$和第$i$个元素的存储位置$LOC(a_i)$之间满足关系$LOC(a_{i+1})=LOC(a_i)+l$，一般来说线性表的第$i$个元素$a_i$的存储位置为$LOC(a_i)=LOC(a_1)+(i-1)l$，其中$LOC(a_1)$是线性表的<strong>起始位置</strong>或<strong>基地址</strong>。顺序表内相邻元素有相邻的存储位置，<strong>物理位置相邻</strong>，顺序存储结构是一种随机存取的存储结构。</p>
+<ol>
+<li>
+<p>初始化</p>
+<p>构造一个空的顺序表：为L动态分配一个预定义大小的数组空间，使<code>elem</code>指向这段空间的基地址；将表的当前长度设为0。</p>
+<ul>
+<li>为顺序表$L$分配数组空间（静态和动态），使数据$elem$指向该段空间的基地址</li>
+<li>将表的当前长度设为0</li>
+</ul>
+<p>静态分配适合于没有指针操作的语言，实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>SqList_static sqlist1;	<span style="color:#75715e">// 顺序表
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sqlist1.length <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;		<span style="color:#75715e">// 初始化长度
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sqlist1.elem[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>sqlist1.elem[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>sqlist1.elem[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>sqlist1.elem[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;
+</span></span><span style="display:flex;"><span>sqlist1.length <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;		<span style="color:#75715e">// 存储玩数据
+</span></span></span></code></pre></div><p>动态分配适合有指针操作的语言，实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Status <span style="color:#a6e22e">SqList_dynamic_Init</span>(SqList_dynamic <span style="color:#f92672">*</span>L)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    L<span style="color:#f92672">-&gt;</span>elem <span style="color:#f92672">=</span> (ElemType <span style="color:#f92672">*</span>)<span style="color:#a6e22e">malloc</span>(<span style="color:#66d9ef">sizeof</span>(ElemType) <span style="color:#f92672">*</span> SQLIST_MAXSIZE);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (L<span style="color:#f92672">-&gt;</span>elem <span style="color:#f92672">==</span> NULL)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    L<span style="color:#f92672">-&gt;</span>length <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>取值</p>
+<p>取值操作是根据指定位置序号$i$，获取顺序表中的第$i$个数据元素的值，将其存在参数$e$中，并返回<code>STATUS_OK</code>；位置序号不合理，则返回<code>STATUS_INFEASIBLE</code>。</p>
+<ul>
+<li>判断指定位置$i$是否合法，非法则返回<code>STATUS_INFEASIBLE</code></li>
+<li>将第$i$个位置数据元素值<code>L.elem[i-1]</code>赋给参数<code>e</code></li>
+</ul>
+<p>静态分配实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">SqList_static_GetElem</span>(SqList_static L, <span style="color:#66d9ef">int</span> i)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> i <span style="color:#f92672">&gt;</span> L.length)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> e <span style="color:#f92672">=</span> L.elem[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> e;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>动态分配实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Status <span style="color:#a6e22e">SqList_dynamic_GetElem</span>(SqList_dynamic L, <span style="color:#66d9ef">int</span> i, ElemType <span style="color:#f92672">*</span>e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> i <span style="color:#f92672">&gt;</span> L.length)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>e <span style="color:#f92672">=</span> L.elem[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>查找</p>
+<p>查找操作是根据指定的元素值$e$，查找顺序表中第1个与$e$相等的元素，查找成功则返回位置序号；查找失败则返回0。</p>
+<ul>
+<li>从第一个元素起，依次比较<code>L.elem[i]</code>和<code>e</code>，相匹配则返回序号<code>i+1</code></li>
+<li>查找失败则返回0</li>
+</ul>
+<p>静态分配实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">SqList_static_LocateElem</span>(SqList_static L, ElemType e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> L.length; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (L.elem[i] <span style="color:#f92672">==</span> e)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>动态分配实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">SqList_dynamic_LocateElem</span>(SqList_dynamic L, ElemType e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> L.length; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (L.elem[i] <span style="color:#f92672">==</span> e)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>插入</p>
+<p>插入操作是在表的$i$个位置插入一个新的数据元素$e$，使长度为$n$的线性表变为长度为$n+1$的线性表，数据元素$a_i$及其后续数据元素均向后移动一位，在算法上需要从最后一个元素即第$n$个元素开始依次向后移动一个位置，直至第$i$个元素，共移动$(n-i+1)$个数据元素。</p>
+<ul>
+<li>判断插入位置$i$是否合法，非法则返回<code>STATUS_INFEASIBLE</code></li>
+<li>判断顺序表存储空间是否充足，不够则返回<code>STATUS_OVERFLOW</code></li>
+<li>将第$n$个至第$i$个位置的元素依次向后移动一位，空出第$i$个位置</li>
+<li>将要插入的元素$e$放入第$i$个位置</li>
+<li>表长加1</li>
+</ul>
+<p>静态分配实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Status <span style="color:#a6e22e">SqList_static_Insert</span>(SqList_static <span style="color:#f92672">*</span>L, <span style="color:#66d9ef">int</span> i, ElemType e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> i <span style="color:#f92672">&gt;</span> L<span style="color:#f92672">-&gt;</span>length <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (L<span style="color:#f92672">-&gt;</span>length <span style="color:#f92672">==</span> SQLIST_MAXSIZE)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> L<span style="color:#f92672">-&gt;</span>length <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&gt;=</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; j<span style="color:#f92672">--</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        L<span style="color:#f92672">-&gt;</span>elem[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> L<span style="color:#f92672">-&gt;</span>elem[j];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    L<span style="color:#f92672">-&gt;</span>elem[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> e;
+</span></span><span style="display:flex;"><span>    L<span style="color:#f92672">-&gt;</span>length<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>动态分配实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Status <span style="color:#a6e22e">SqList_dynamic_Insert</span>(SqList_dynamic <span style="color:#f92672">*</span>L, <span style="color:#66d9ef">int</span> i, ElemType e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> i <span style="color:#f92672">&gt;</span> L<span style="color:#f92672">-&gt;</span>length <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (L<span style="color:#f92672">-&gt;</span>length <span style="color:#f92672">==</span> SQLIST_MAXSIZE)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> L<span style="color:#f92672">-&gt;</span>length <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&gt;=</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; j<span style="color:#f92672">--</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        L<span style="color:#f92672">-&gt;</span>elem[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> L<span style="color:#f92672">-&gt;</span>elem[j];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    L<span style="color:#f92672">-&gt;</span>elem[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> e;
+</span></span><span style="display:flex;"><span>    L<span style="color:#f92672">-&gt;</span>length<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>顺序表在进行数据元素的插入时，时间主要耗费在元素的移动上，移动元素的个数取决于插入元素的位置。</p>
+</li>
+<li>
+<p>删除</p>
+<p>删除操作是将表中的第$i$个元素删除，将长度为$n$的线性表变为长度为$n-1$的线性表，数据元素$a_i$其后续数据元素均向前移动一位，在算法上需要从第$i+1$个元素开始依次向前移动一个位置，直至第$n$个元素，共移动$(n-i)$个元素。</p>
+<ul>
+<li>判断删除位置$i$是否合法，非法则返回<code>STATUS_INFEASIBLE</code></li>
+<li>将第$i+1$个至第$n$个位置的元素依次向前移动一个位置</li>
+<li>表长减1</li>
+</ul>
+<p>静态分配实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Status <span style="color:#a6e22e">SqList_static_Delete</span>(SqList_static <span style="color:#f92672">*</span>L, <span style="color:#66d9ef">int</span> i)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> i <span style="color:#f92672">&gt;</span> L<span style="color:#f92672">-&gt;</span>length)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;</span> L<span style="color:#f92672">-&gt;</span>length <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        L<span style="color:#f92672">-&gt;</span>elem[j] <span style="color:#f92672">=</span> L<span style="color:#f92672">-&gt;</span>elem[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    L<span style="color:#f92672">-&gt;</span>length<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>动态分配实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Status <span style="color:#a6e22e">SqList_dynamic_Delete</span>(SqList_dynamic <span style="color:#f92672">*</span>L, <span style="color:#66d9ef">int</span> i)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> i <span style="color:#f92672">&gt;</span> L<span style="color:#f92672">-&gt;</span>length)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;</span> L<span style="color:#f92672">-&gt;</span>length <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        L<span style="color:#f92672">-&gt;</span>elem[j] <span style="color:#f92672">=</span> L<span style="color:#f92672">-&gt;</span>elem[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    L<span style="color:#f92672">-&gt;</span>length<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>打印</p>
+<p>打印操作是将表中的数据元素依次打印。</p>
+<ul>
+<li>判断表长度是否非空</li>
+<li>遍历打印数据元素</li>
+</ul>
+<p>静态分配实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">SqList_static_Print</span>(SqList_static L)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (L.length <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;[]</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> L.length; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;L.elem[%d] = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i, L.elem[i]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>动态分配实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">SqList_dynamic_Print</span>(SqList_dynamic L)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (L.length <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;[]</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> L.length; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;L.elem[%d] = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i, L.elem[i]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>获取表长度</p>
+<p>返回表长度</p>
+<p>静态分配实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">SqList_static_Length</span>(SqList_static L)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> L.length;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>动态分配实现代码如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">SqList_dynamic_Print</span>(SqList_dynamic L)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (L.length <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;[]</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> L.length; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;L.elem[%d] = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i, L.elem[i]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="322-线性表的链式表示和实现">3.2.2 线性表的链式表示和实现</h4>
+<p>线性表的链式表示是<strong>用一组任意的存储单元存储线性表的数据元素</strong>。为表示每个数据元素$a_i$，除了存储其本身的信息之外，还需要存储一个指示其后续的信息，这两部分信息组成数据元素$a_i$的存储映像，称为<strong>结点</strong>，每个结点包括两个域：数据域和指针域。$n$个结点链接成一个链表，即为线性表的链式存储结构。数据元素间的逻辑关系是由结点中的指针指示的，这种存储结构为非顺序映像或链式映像。</p>
+<p>根据链表结点所含指针个数、指针指向和指针连接方式，可将链表分为单链表、循环链表、双向链表、二叉链表、十字链表、邻接表、邻接多重表等，其中单链表、循环链表、双向链表用于实现线性表的链式存储结构，其他形式多用于实现树和图等非线性结构。下图所示为线性表的单链表存储结构，<strong>整个链表的存取必须从头指针开始进行</strong>，头指针为链表中的第一个结点（基地址），最后一个结点指针为空。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zhang-TNT/markdown-imgs@main/imgs/image-20250225221806339.png" alt="image-20250225221806339"></p>
+<p>通常将链表化成使用箭头相链接的结点序列，结点之间的箭头表示指针域中的指针，只需要表示线性表中数据元素之间的逻辑顺序即可，<strong>单链表可由头指针唯一确定</strong>。C语言中使用“结构指针”来描述</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// 单链表存储结构
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> _LNode
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> data;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">struct</span> _LNode <span style="color:#f92672">*</span>next;
+</span></span><span style="display:flex;"><span>}LNode;
+</span></span></code></pre></div><p>这里对首元结点、头结点和头指针三个概念加以说明</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zhang-TNT/markdown-imgs@main/imgs/image-20250226195914911.png" alt="image-20250226195914911"></p>
+<ul>
+<li>首元结点：链表中存储第一个数据元素的结点</li>
+<li>头结点：首元结点前附设的一个结点，数据域不存储信息（或存储与数据元素类型相同的附加信息），指针域指向首元结点；头结点作用：便于首元结点处理、便于空表和非空表的统一处理</li>
+<li>头指针：指向链表中第一个结点的指针，若没有头结点时指向首元结点，是链表必要元素</li>
+</ul>
+<p>注：引入头结点后，头指针的指向始终为头结点，虽然会占用内存；未引入头结点，头指针的指向会发生改变。</p>
+<ol>
+<li>
+<p>初始化</p>
+<p>构建一个指向头指针的指针，即一个二重指针，生成一个新结点，二重指针指向该结点（头结点），头结点指针域为NULL。</p>
+<ul>
+<li>生成新结点作为头结点，由头指针指向该结点</li>
+<li>头结点指针域置空</li>
+</ul>
+<p>带头节点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// 初始化参数必须是指针，即指向头指针的指针
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Status <span style="color:#a6e22e">LinkList_Init</span>(LinkList <span style="color:#f92672">*</span>L)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>L <span style="color:#f92672">=</span> (LNode <span style="color:#f92672">*</span>)<span style="color:#a6e22e">malloc</span>(<span style="color:#66d9ef">sizeof</span>(LNode));	<span style="color:#75715e">// 头指针指向头节点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">*</span>L <span style="color:#f92672">==</span> NULL)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    (<span style="color:#f92672">*</span>L)<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> NULL;	<span style="color:#75715e">// 头节点指针域为NULL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>不带头节点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"></code></pre></div></li>
+<li>
+<p>取值</p>
+<p>取值操作只能从链表的首元结点出发，顺着链域<code>next</code>逐个结点向下访问。</p>
+<ul>
+<li>用指针<code>p</code>指向首元结点，用<code>j</code>做计数器</li>
+<li>从首元结点开始依次顺着链域<code>next</code>向下访问，只要当前结点指针<code>p</code>不为空，且没有到达序号<code>i</code>的结点，循环执行：<code>p</code>指向下一个结点，计数器<code>j</code>加1</li>
+<li>退出循环时，如果指针<code>p</code>为空或<code>j</code>大于<code>i</code>时，说明指定的序号<code>i</code>不合法；否则取值成功，有<code>j=i</code>，<code>p</code>所指的结点即为要找的<code>i</code>号数据元素，用参数<code>e</code>保存数据</li>
+</ul>
+<p>带头结点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Status <span style="color:#a6e22e">LinkList_GetElem</span>(LinkList L, <span style="color:#66d9ef">int</span> i, ElemType <span style="color:#f92672">*</span>e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    LNode <span style="color:#f92672">*</span>pTemp <span style="color:#f92672">=</span> L<span style="color:#f92672">-&gt;</span>next;	<span style="color:#75715e">// 指向首元结点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (pTemp <span style="color:#f92672">!=</span> NULL <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;</span> i)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        pTemp <span style="color:#f92672">=</span> pTemp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        j<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (pTemp <span style="color:#f92672">==</span> NULL <span style="color:#f92672">||</span> j <span style="color:#f92672">&gt;</span> i)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>e <span style="color:#f92672">=</span> pTemp<span style="color:#f92672">-&gt;</span>data;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>不带头结点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"></code></pre></div></li>
+<li>
+<p>查找</p>
+<p>查找操作是从链表首元结点出发，依次将结点值与给定值$e$进行比较，返回目标结点地址。</p>
+<ul>
+<li>用指针指向首元结点</li>
+<li>从首元结点出发顺着链域向下查找，当前结点$p$指针域不为空且数据域不等于给定值$e$执行循环操作：$p$指向下一个结点</li>
+<li>查找成功则返回$p$，失败则返回<code>STATUS_ERROR</code></li>
+</ul>
+<p>带头结点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">LinkList_LocateElem</span>(LinkList L, ElemType e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    LNode <span style="color:#f92672">*</span>pTemp <span style="color:#f92672">=</span> L<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (pTemp <span style="color:#f92672">!=</span> NULL)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (pTemp<span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">==</span> e)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> i;
+</span></span><span style="display:flex;"><span>        pTemp <span style="color:#f92672">=</span> pTemp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>不带头结点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"></code></pre></div></li>
+<li>
+<p>插入</p>
+<p>插入操作是在表的第$i$个位置插入一个值为$e$的新结点$s$，插入到$a_{i-1}$到$a_i$之间。</p>
+<ul>
+<li>查找结点$a_{i-1}$</li>
+<li>创建新结点$s$，数据域为$e$，指针域为$a_i$</li>
+<li>将结点$a_{i-1}$的指针域更改为结点$s$</li>
+</ul>
+<p>带头结点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Status <span style="color:#a6e22e">LinkList_Insert</span>(LinkList <span style="color:#f92672">*</span>L, <span style="color:#66d9ef">int</span> i, ElemType e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    LNode <span style="color:#f92672">*</span>pTemp <span style="color:#f92672">=</span> (<span style="color:#f92672">*</span>L); <span style="color:#75715e">// pTemp指向头结点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (pTemp <span style="color:#f92672">!=</span> NULL <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        pTemp <span style="color:#f92672">=</span> pTemp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        j<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (pTemp <span style="color:#f92672">==</span> NULL <span style="color:#f92672">||</span> j <span style="color:#f92672">&gt;</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    LNode <span style="color:#f92672">*</span>pNode <span style="color:#f92672">=</span> (LNode <span style="color:#f92672">*</span>)<span style="color:#a6e22e">malloc</span>(<span style="color:#66d9ef">sizeof</span>(LNode));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (pNode <span style="color:#f92672">==</span> NULL)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    pNode<span style="color:#f92672">-&gt;</span>data <span style="color:#f92672">=</span> e;
+</span></span><span style="display:flex;"><span>    pNode<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> pTemp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>    pTemp<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> pNode;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>不带头结点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"></code></pre></div></li>
+<li>
+<p>删除</p>
+<p>删除操作是将链表中的第$i$个位置的结点$p$删除，首先找到其前驱结点$o$，然后修改$o$的指针域即可。</p>
+<ul>
+<li>查找结点$a_{i-1}$，由指针$p$指向该结点</li>
+<li>临时保存结点$a_i$的地址在$q$中</li>
+<li>将结点$*p$的指针域指向$a_i$的后继结点</li>
+<li>释放结点$a_i$的空间</li>
+</ul>
+<p>带头结点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Status <span style="color:#a6e22e">LinkList_Delete</span>(LinkList L, <span style="color:#66d9ef">int</span> i)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    LNode <span style="color:#f92672">*</span>pTemp <span style="color:#f92672">=</span> L<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">// pTemp指向首元结点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (pTemp <span style="color:#f92672">!=</span> NULL <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        pTemp <span style="color:#f92672">=</span> pTemp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>        j<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (pTemp <span style="color:#f92672">==</span> NULL <span style="color:#f92672">||</span> j <span style="color:#f92672">&gt;</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    LNode <span style="color:#f92672">*</span>pNode <span style="color:#f92672">=</span> pTemp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (pNode <span style="color:#f92672">==</span> NULL)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    pTemp<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> pNode<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">free</span>(pNode);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>不带头结点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"></code></pre></div></li>
+<li>
+<p>打印</p>
+<p>打印链表数据域操作是从链表头指针$phead$出发，顺着链域向下遍历，在链域不为<code>NULL</code>条件下打印数据域。</p>
+<ul>
+<li>新建结点指向首元结点</li>
+<li>顺着首元结点向下检索直到尾节点</li>
+</ul>
+<p>带头结点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">LinkList_Print</span>(LinkList L)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    LNode <span style="color:#f92672">*</span>pTemp <span style="color:#f92672">=</span> L<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">// pTemp指向首元结点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (pTemp <span style="color:#f92672">==</span> NULL)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;[]</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (pTemp <span style="color:#f92672">!=</span> NULL)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;L.elem[%d] = %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, pTemp<span style="color:#f92672">-&gt;</span>data);
+</span></span><span style="display:flex;"><span>            pTemp <span style="color:#f92672">=</span> pTemp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>            i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>不带头结点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"></code></pre></div></li>
+<li>
+<p>获取长度</p>
+<p>求链表长度操作是从链表的头指针$phead$出发，设置计数器，顺着链域向下寻找，在链域不为<code>NULL</code>前提下进行计数，直至遇到<code>NULL</code>计数结束，即为链表长度。</p>
+<ul>
+<li>新建结点指向首元结点</li>
+<li>新建计数器从零开始计数</li>
+<li>顺着首元结点向下检索，结点指针域不为NULL则计数器加1，直到尾节点</li>
+</ul>
+<p>带头结点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">LinkList_Length</span>(LinkList L)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    LNode <span style="color:#f92672">*</span>pTemp <span style="color:#f92672">=</span> L<span style="color:#f92672">-&gt;</span>next; <span style="color:#75715e">// pTemp指向首元结点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (pTemp <span style="color:#f92672">!=</span> NULL)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        len<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        pTemp <span style="color:#f92672">=</span> pTemp<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> len;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>不带头结点代码实现如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"></code></pre></div></li>
+</ol>
+<h4 id="323-顺序表和链表比较">3.2.3 顺序表和链表比较</h4>
+<ul>
+<li>
+<p>空间性能</p>
+<p>顺序表必须预先分配空间，已造成存储空间浪费或空间溢出；链表不需预先分配空间，元素个数没有限制。</p>
+<p>由于链表每个结点还要额外设置指针域，从存储密度上讲是不经济的。</p>
+</li>
+<li>
+<p>时间性能</p>
+<p>顺序表是一种随机存取结构，存取元素时间复杂度为$O(1)$；链表存取元素必须检索全链表，存取元素时间复杂度为$O(n)$。</p>
+</li>
+</ul>
+<h4 id="324-其他链表">3.2.4 其他链表</h4>
+<p>对于单链表，结点中的指针域只存储了向后的指针，不能满足一些复杂问题，因此提出以下链表。</p>
+<ul>
+<li>
+<p>循环链表</p>
+<p>将单链表中终端尾节点指针由NULL改为指向头节点，就使得整个单链表形成一个换，这种头尾相接的单链表称为<strong>单循环链表</strong>。示意图如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zhang-TNT/markdown-imgs@main/imgs/image-20250226212555556.png" alt="image-20250226212555556"></p>
+</li>
+<li>
+<p>双向链表</p>
+<p>双向链表就是在单链表的每个结点中，在设置一个指向其前驱结点的指针域，使得链表可以双向检索。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zhang-TNT/markdown-imgs@main/imgs/image-20250226212848349.png" alt="image-20250226212848349"></p>
+</li>
+</ul>
+<h4 id="325-线性表的应用">3.2.5 线性表的应用</h4>
+<p>线性表是其他数据结构的基础，因此应用非常广泛。</p>
+<h3 id="33-栈与队列">3.3 栈与队列</h3>
+<h4 id="331-栈">3.3.1 栈</h4>
+<ol>
+<li>
+<p>定义</p>
+<p>栈（stack）是限定<strong>仅在表尾进行插入或删除操作的线性表</strong>。表尾称为<strong>栈顶</strong>，表头称为<strong>栈底</strong>；栈是自动管理的内存区域，系统进行自动分配和释放内存，采取先进后出**（FILO）**的原则，连续存储数据。栈的示意图如下所示</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zhang-TNT/markdown-imgs@main/imgs/image-20250226214033219.png" alt="image-20250226214033219"></p>
+<p>栈对线性表的插入和删除位置进行了限制，<strong>但并没有对元素进出的时间进行限制</strong>，事先进入的元素也可最先出栈。</p>
+</li>
+<li>
+<p>栈的抽象数据类型</p>
+<p>对栈来说，将其插入和删除操作，改名为<code>push</code>和<code>pop</code>，即压栈和弹栈。基本操作还有栈的初始化、栈的长度、获取栈顶元素等，栈的抽象数据类型如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>ADT Stack{
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">数据对象：</span>D <span style="color:#f92672">=</span> {ai<span style="color:#f92672">|</span>ai belong to ElemSet}
+</span></span><span style="display:flex;"><span>    	<span style="color:#960050;background-color:#1e0010">数据关系：</span>R <span style="color:#f92672">=</span> {<span style="color:#f92672">&lt;</span>ai<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, ai<span style="color:#f92672">&gt;|</span>ai<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, ai belong to D}
+</span></span><span style="display:flex;"><span>    	<span style="color:#960050;background-color:#1e0010">基本操作：</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">InitStack</span>(<span style="color:#f92672">&amp;</span>S)<span style="color:#960050;background-color:#1e0010">：初始化</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">DestroyStack</span>(<span style="color:#f92672">&amp;</span>S)<span style="color:#960050;background-color:#1e0010">：销毁</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">ClearStack</span>(<span style="color:#f92672">&amp;</span>S)<span style="color:#960050;background-color:#1e0010">：清空</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">StackEmpty</span>(S)<span style="color:#960050;background-color:#1e0010">：是否空栈</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">StackLength</span>(S)<span style="color:#960050;background-color:#1e0010">：栈长度</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">GetTop</span>(S)<span style="color:#960050;background-color:#1e0010">：返回栈顶元素</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Push</span>(<span style="color:#f92672">&amp;</span>S, e)<span style="color:#960050;background-color:#1e0010">：将</span>e压入栈
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Pop</span>(<span style="color:#f92672">&amp;</span>S, <span style="color:#f92672">&amp;</span>e)<span style="color:#960050;background-color:#1e0010">：删除栈顶元素，用</span>e返回
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">StackTraverse</span>(S)<span style="color:#960050;background-color:#1e0010">：遍历栈</span>
+</span></span><span style="display:flex;"><span>}ADT Stack
+</span></span></code></pre></div></li>
+<li>
+<p>表示和实现</p>
+<p>既然栈是线性表的特例，那么栈也有<strong>顺序栈</strong>、<strong>链式栈</strong>两种存储表示方式。</p>
+<ul>
+<li>
+<p>顺序栈</p>
+<p>顺序栈可表示如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">/* sequence Stack structure static */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> _SqStack
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    ElemType elem[SQLIST_MAXSIZE];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> top;
+</span></span><span style="display:flex;"><span>} SqStack;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* sequence Stack structure dynamic */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> _SqStack_dynamic
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    ElemType <span style="color:#f92672">*</span>elem;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> top;
+</span></span><span style="display:flex;"><span>} SqStack_dynamic;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* sharing sequence Stack structure */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> _SqStack_shared
+</span></span><span style="display:flex;"><span>{<span style="color:#75715e">// 共享栈使用同一段内存空间，一个栈的栈底为数组始端“0”处，另一个栈的栈底为数组末端“n-1”处，两栈向中间靠拢。栈1为空时，top1=-1；栈2为空时，top2=n。两者栈顶相差1时，为栈满。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    ElemType elem[STACK_MAXSIZE];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> top1;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> top2;
+</span></span><span style="display:flex;"><span>} _SqStack_shared;
+</span></span></code></pre></div><ul>
+<li>
+<p>初始化</p>
+<p>顺序栈的初始化操作就是为顺序栈分配一块内存空间，将栈置为空。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">Stack_Init</span>(SqStack <span style="color:#f92672">*</span>S)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    S<span style="color:#f92672">-&gt;</span>top <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 初始化栈为空
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div></li>
+<li>
+<p>清空栈</p>
+<p>顺序栈的清空操作就是将栈置为空，丢弃所存储的数据。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">Stack_Clear</span>(SqStack <span style="color:#f92672">*</span>S)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    S<span style="color:#f92672">-&gt;</span>top <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 清空栈
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div></li>
+<li>
+<p>压栈</p>
+<p>顺序栈的压栈操作就是在栈顶插入一个新的元素</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Status <span style="color:#a6e22e">Stack_Push</span>(SqStack <span style="color:#f92672">*</span>S, ElemType e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (S<span style="color:#f92672">-&gt;</span>top <span style="color:#f92672">==</span> STACK_MAXSIZE <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    S<span style="color:#f92672">-&gt;</span>top<span style="color:#f92672">++</span>;            <span style="color:#75715e">// 栈顶指针向上移
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    S<span style="color:#f92672">-&gt;</span>elem[S<span style="color:#f92672">-&gt;</span>top] <span style="color:#f92672">=</span> e; <span style="color:#75715e">// 将元素插入栈顶
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// S-&gt;elem[++S-&gt;top] = e;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>弹栈</p>
+<p>顺序栈的弹栈操作就是删除栈顶元素</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Status <span style="color:#a6e22e">Stack_Pop</span>(SqStack <span style="color:#f92672">*</span>S, ElemType <span style="color:#f92672">*</span>e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (S<span style="color:#f92672">-&gt;</span>top <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>e <span style="color:#f92672">=</span> S<span style="color:#f92672">-&gt;</span>elem[S<span style="color:#f92672">-&gt;</span>top];
+</span></span><span style="display:flex;"><span>    S<span style="color:#f92672">-&gt;</span>top<span style="color:#f92672">--</span>; <span style="color:#75715e">// 栈顶指针向下移
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>获取栈顶元素</p>
+<p>顺序栈的获取栈顶元素操作</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>Status <span style="color:#a6e22e">Stack_GetTop</span>(SqStack S, ElemType <span style="color:#f92672">*</span>e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (S.top <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> STATUS_ERROR;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span>e <span style="color:#f92672">=</span> S.elem[S.top];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> STATUS_OK;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>栈长度</p>
+<p>顺序栈的长度</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">Stack_Length</span>(SqStack S)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> S.top <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>栈遍历打印</p>
+<p>顺序栈的遍历打印</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">Stack_Print</span>(SqStack S)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> S.top; i <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; i<span style="color:#f92672">--</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Stack.elem[%d] = %d </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i, S.elem[i]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>链式栈</p>
+<p>链式栈可表示如下</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="332-栈的应用">3.3.2 栈的应用</h4>
+<ol>
+<li>
+<p>栈</p>
+<p>在软件应用中，如浏览器网页的后退键，能返回之前所浏览的网页；还有编辑软件这撤销功能，可撤销上次操作。这些功能的实现都是通过<strong>栈</strong>这种数据结构实现。</p>
+</li>
+<li></li>
+</ol>
+<h4 id="333-队列">3.3.3 队列</h4>
+<ol>
+<li>
+<p>定义</p>
+<p>队列（queue）是一种先进先出（FIFO）的线性表，<strong>限定仅在表的一端进行插入元素，而在另一端删除元素</strong>，允许插入的一端称为<strong>队尾</strong>，允许删除的一端称为<strong>队头</strong>。队列的示意图如下所示</p>
+</li>
+<li>
+<p>队列的抽象数据类型</p>
+</li>
+<li>
+<p>表示和实现</p>
+</li>
+</ol>
+<h4 id="334-队列的应用">3.3.4 队列的应用</h4>
+
+</div>
+      </div>
+    </div>
+    <div class="footer flex items-center justify-center">
+  <div class="py-4">
+  <footer>
+    <p class="whitespace-nowrap">© 2025. All rights reserved.</p>
+  </footer>
+</div>
+</div>
+  </div>
+
+  </div>
+  
+      <script type="text/javascript" src="/js/navbar.js"></script>
+
+  <script id="dsq-count-scr" src="//nayanseth.disqus.com/count.js" async></script>
+  
+</body>
+
+</html>
