@@ -1,4 +1,5 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://Zhang-TNT.github.io/my-blog/'
 languageCode = 'en-us'
 title = 'wenwen'
 theme = "terminal"
+canonifyURLs = true

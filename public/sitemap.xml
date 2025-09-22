@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/about.html</loc>
+    <loc>https://Zhang-TNT.github.io/my-blog/about.html</loc>
     <lastmod>2024-03-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/</loc>
+    <loc>https://Zhang-TNT.github.io/my-blog/authors/</loc>
     <lastmod>2024-03-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://Zhang-TNT.github.io/my-blog/blog/</loc>
     <lastmod>2024-03-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://Zhang-TNT.github.io/my-blog/</loc>
     <lastmod>2024-03-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/nayan-seth/</loc>
+    <loc>https://Zhang-TNT.github.io/my-blog/authors/nayan-seth/</loc>
     <lastmod>2024-03-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://Zhang-TNT.github.io/my-blog/tags/</loc>
     <lastmod>2024-03-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/datastructure/</loc>
+    <loc>https://Zhang-TNT.github.io/my-blog/blog/datastructure/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://Zhang-TNT.github.io/my-blog/categories/</loc>
   </url>
 </urlset>
